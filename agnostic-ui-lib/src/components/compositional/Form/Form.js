@@ -1,17 +1,19 @@
 import React, { Component } from "react";
+import { FormStyle } from "./FormStyle";
+import { FormLayout } from "./FormLayout";
 
 class Form extends Component {
   render() {
     const {
       spec: {
         form: {
-          style: { inner: innerStyle, outer: outerStyle },
-          layout: formLayout
-        },
-        elements,
-        data: formData,
-        controllers
-      }
+          style: { inner: innerStyle, outer: outerStyle } = {},
+          layout: formLayout = {}
+        } = {},
+        elements = [],
+        data: formData = {},
+        controllers = {}
+      } = {}
     } = this.props;
 
     let formElements = elements.map(formElementSpec => {
