@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FormStyle } from "./FormStyle";
 import { FormLayout } from "./FormLayout";
+import { FormElement } from "./FormElement";
 
 class Form extends Component {
   render() {
